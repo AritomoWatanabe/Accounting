@@ -9,6 +9,7 @@ class AccountsController < ApplicationController
 	def create
 		@account = Account.new(account_params)
 		@account.save
+		redirect_to accounts_path
 	end
 
 

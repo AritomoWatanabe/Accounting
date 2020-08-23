@@ -2,7 +2,7 @@
 // ▼グラフの中身
    		const hoge = ('count_thismonth').value
    		var barChartData = {
-      		labels : ["花組","月組","雪組","星組","宙組","海組","彗組"],
+      		labels : ["7月","8月","9月","10月","11月","12月"],
       		datasets : [
          		{
             		fillColor : "rgba(240,128,128,0.6)",    // 塗りつぶし色
