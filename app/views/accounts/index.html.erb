@@ -7,13 +7,6 @@
 
 	<body>
 
-		<%= link_to "indexへ", accounts_path %>
-
-		<p>検索</p>
-			<%= form_tag(search_path,:method => 'get') do %>
-  				<%= select_tag(:year, options_for_select([["2019", "2019"],["2020", "2020"],["2021", "2021"],["2022", "2022"],["2023", "2023"],["2024", "2024"],["2025", "2025"]])) %>
-  				<%= submit_tag 'Search', :name => nil %>
-			<% end %>
 
 		<%= form_for @account, url: accounts_path do |f| %>
 
@@ -42,7 +35,21 @@
 
       	<%= f.submit "新規登録", class: "btn btn-primary btn-lg" %>
 
-      	<% end %>
+    <% end %>
+
+
+
+
+    <p>検索</p>
+
+      <%= form_tag(search_path,:method => 'get') do %>
+          <%= select_tag(:year, options_for_select([["2019", "2019"],["2020", "2020"],["2021", "2021"],["2022", "2022"],["2023", "2023"],["2024", "2024"],["2025", "2025"]])) %>
+          <%= submit_tag '検索', :name => nil %>
+      <% end %>
+
+    <%= link_to "全表示", accounts_path %>
+
+
 
 
     	<table class="table">
@@ -76,7 +83,7 @@
   		</table>
 
 
-  		<canvas id="graph-area" height="450" width="600"></canvas>
+  		<!-- <canvas id="graph-area" height="450" width="600"></canvas> -->
 
 
 	</body>
