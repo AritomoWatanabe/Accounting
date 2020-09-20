@@ -1,0 +1,22 @@
+
+
+<div class="title">現場 追加</div>
+
+			<%= form_for @construction_site, url: construction_sites_path do |f| %>
+
+				<div>
+        			<%= f.label :name, "現場名" %>
+        			<%= f.text_field :name %>
+      			</div>
+
+      			<div>
+      				<%= f.submit "新規登録" %>
+      			</div>
+
+      		<% end %>
+
+      		<% @construction_sites.each do |construction_site| %>
+
+      			<div><%= construction_site.name %></div>
+
+      		<% end %>
